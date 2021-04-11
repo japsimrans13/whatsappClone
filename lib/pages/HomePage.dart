@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_whatsapp_clone/pages/ChatPage.dart';
-import 'package:flutter_whatsapp_clone/pages/Upload.dart';
+import 'package:flutter_whatsapp_clone/pages/UploadCaption.dart';
+import 'package:flutter_whatsapp_clone/pages/UploadHashtag.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
@@ -18,7 +19,7 @@ class _HomePageState extends State<HomePage>
     // Later call this as a list adn fetch these titles from server.
     Tab(text: 'CATS'),
     Tab(text: 'DOGS'),
-    Tab(text: 'FAKE'),
+    Tab(icon: Icon(Icons.cloud_upload)),
   ];
 
   @override
@@ -59,7 +60,7 @@ class _HomePageState extends State<HomePage>
           UploadCaption(),
           ChartPage(),
           Text('To be updated'),
-          Text('To be updated'),
+          UploadHashtag(),
         ],
       ),
     );
